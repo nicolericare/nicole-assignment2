@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'npm run build'
+                sh 'npm run build'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'npm test -- --watchAll=false'
+                sh 'npm test -- --watchAll=false'
             }
         }
     }
