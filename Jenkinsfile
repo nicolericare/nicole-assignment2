@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('* * * * *')
+    }
+
     environment {
         NETLIFY_SITE_ID = 'fba8ecd9-a3f4-47af-930e-108555b8ac24'
     }
